@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 200px;
+        height: 200px;
+      }
+      .children {
+        width: 100px;
+        height: 100px;
+      }
+      #context {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="children">
+        <span id="context">sfdfasdfadsfas</span>
+      </div>
+    </div>
+    <script>
+      parent = document.getElementsByClassName("parent")[0];
+      children = document.getElementsByClassName("children")[0];
+      // console.log(children.scrollWidth);
+      // console.log(children.clientWidth);
+      // console.log(children.clientHeight);
+      context = document.getElementById("context");
+
+      console.log(context, context.clientWidth, context.clientHeight);
+    </script>
+  </body>
+</html>
